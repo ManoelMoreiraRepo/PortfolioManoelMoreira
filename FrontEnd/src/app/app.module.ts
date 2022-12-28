@@ -12,6 +12,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { LogoapComponent } from './components/logoap/logoap.component';
 import { BannerComponent } from './components/banner/banner.component';
 import { ProyectoComponent } from './components/proyecto/proyecto.component';
+import { NgCircleProgressModule } from 'ng-circle-progress';
 
 @NgModule({
   declarations: [
@@ -28,8 +29,9 @@ import { ProyectoComponent } from './components/proyecto/proyecto.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
-  ],
+    AppRoutingModule,
+    NgCircleProgressModule.forRoot({}),
+    ],
   providers: [],
   bootstrap: [AppComponent]
 })
