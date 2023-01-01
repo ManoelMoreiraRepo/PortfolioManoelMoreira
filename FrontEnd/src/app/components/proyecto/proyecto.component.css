@@ -1,0 +1,16 @@
+* {
+    background: #b8b9b9;
+}
+
+h1 {
+    color: blue;
+    padding: 20px;
+}
+
+.row {
+    background: #b8b9b9;
+}
+
+.container {
+    text-align: left;
+}
