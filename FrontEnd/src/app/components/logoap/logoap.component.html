@@ -7,7 +7,8 @@
             <a href="https://www.instagram.com/manmoreira40/"><img src="../../../assets/img/icons8-instagram-30.png" alt=""></a>
             <a href="https://www.linkedin.com/in/manoel-moreira-907915a7/"><img src="../../../assets/img/icons8-linkedin-circled-30.png" alt=""></a>
             <a href="https://github.com/ManoelMoreiraRepo?tab=repositories"><img src="../../../assets/img/icons8-github-30.png" alt=""></a>
-            <button type="button" class="btn btn-dark" (click)="login()">Login</button>
+            <button type="button" class="btn btn-dark" (click)="login()" *ngIf="!isLogged">Login</button>
+            <button type="button" class="btn btn-dark" (click)="onLogOut()" *ngIf="isLogged">Cerrar Session</button>
         </div>
     </div>
 </div>
