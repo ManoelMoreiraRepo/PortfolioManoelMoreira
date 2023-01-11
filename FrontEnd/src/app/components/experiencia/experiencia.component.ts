@@ -40,7 +40,7 @@ export class ExperienciaComponent implements OnInit {
           this.cargarExperiencia();
         },
         (err) => {
-          alert('No se pude eliminar la experiencia');
+          alert('Error, No se pude eliminar la experiencia');
         }
       );
     }

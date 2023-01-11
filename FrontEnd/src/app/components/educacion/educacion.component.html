@@ -1,21 +1,32 @@
 <div class="row">
     <h1>Educación</h1>
+    <div class="col-lg-2">
+        <button type="button" class="btn btn-success" routerLink="/nuevaedu" *ngIf="isLogged">
+            Nueva Educación
+        </button>
+    </div>
+
     <div class="col-lg-1"></div>
     <div class="col-lg-11">
-        <ul>
-            <li>
-                <h2>Universidad Tecnologica Nacional (UTN) </h2>
-                <h5>(Noviembre 2016)</h5>
-            </li>
-            <p>Tecnico en Seguridad Electrónica</p>
-        </ul>
-        <ul>
-            <li>
-                <h2>Educación IT </h2>
-                <h5>(Abril 2014)</h5>
-            </li>
-            <p>Progamador en Java Standard</p>
-
-        </ul>
+        <table class="table">
+            <tbody>
+                <tr *ngFor="let Educacion of educacion">
+                    <h2>
+                        <td>{{Educacion.nombreE}}</td>
+                    </h2>
+                    <h4>
+                        <td>{{Educacion.descripcionE}}</td>
+                    </h4>
+                    <td *ngIf="isLogged">
+                        <button class="btn btn-primary" routerLink="/editedu/{{Educacion.id}}">
+                        <i class="bi bi-pencil"></i>EDITAR</button>
+                    </td>
+                    <td *ngIf="isLogged">
+                        <button class="btn btn-danger" (click)="delete(Educacion.id)">
+                            <i class="bi bi-trash3"></i>BORRAR</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
     </div>
 </div>
