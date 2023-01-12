@@ -10,20 +10,20 @@ import javax.persistence.Id;
 @Entity
 public class Educacion {
     @Id
-    @GeneratedValue(strategy =GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
     private String nombreE;
     private String descripcionE;
     
     //Contructores
-
     public Educacion() {
     }
 
-    public Educacion(String nombreE, String decripcionE) {
+    public Educacion(String nombreE, String descripcionE) {
         this.nombreE = nombreE;
         this.descripcionE = descripcionE;
     }
+    
     
     //Getters y Setters
 
