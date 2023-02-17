@@ -14,10 +14,9 @@ descripcionE: string;
 
   constructor(private educacionS: EducacionService, private router: Router){}
 
-  ngOnInit(): void {
-    throw new Error('Method not implemented.');
-  }
+  ngOnInit(): void {}
 
+  
   onCreate():void {
      const educacion= new Educacion(this.nombreE, this.descripcionE);
      this.educacionS.save(educacion).subscribe(
