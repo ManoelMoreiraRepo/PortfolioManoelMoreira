@@ -2,15 +2,14 @@
     background: #b8b9b9;
 }
 
-h1 {
-    color: blue;
-    padding: 20px;
-}
 
 .row {
     background: #b8b9b9;
+    padding: 20px;
 }
 
-.container {
-    text-align: left;
+.circulo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
