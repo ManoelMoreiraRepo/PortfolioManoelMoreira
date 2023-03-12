@@ -4,12 +4,10 @@ import { Observable } from 'rxjs';
 import { persona } from '../model/persona.model';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
-
 export class PersonaService {
-
-  URL='http://localhost:8080/personas/';
+  URL = 'http://localhost:8080/personas/';
 
   constructor(private httpClient: HttpClient) {}
 
@@ -20,19 +18,18 @@ export class PersonaService {
   public detail(id: number): Observable<persona> {
     return this.httpClient.get<persona>(this.URL + `detail/${id}`);
   }
-
-  
-  /*public save(educacion: Educacion): Observable<any> {
+  public update(id: number, Persona: persona): Observable<any> {
+    return this.httpClient.put<any>(this.URL + `update/${id}`, Persona);
+  }
+/*
+  public getPersona(): Observable<persona> {
+    return this.httpClient.get<persona>(this.URL + 'traer/perfil');
+  }
+  public save(educacion: Educacion): Observable<any> {
     return this.httpClient.post<any>(this.url + `create`, educacion);
   }*/
 
-  public update(id: number,Persona: persona): Observable<any> {
-    return this.httpClient.put<any>(this.URL + `update/${id}`, Persona);
-  }
- 
   /*public delete(id: number): Observable<any> {
     return this.httpClient.delete<any>(this.url + `delete/${id}`);
   }*/
-  
-
 }

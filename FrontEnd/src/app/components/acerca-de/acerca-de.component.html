@@ -1,20 +1,20 @@
 <div class="row">
-    <div class="col-lg-2">
-        <button type="button" class="btn btn-primary" routerLink="/editacercade/id" *ngIf="isLogged">
+    <div >
+        <button type="button" class="btn btn-primary" routerLink="/editacercade/1" *ngIf="isLogged">
             Editar Persona
         </button>
     </div>
 
     <div class="col-xs-12 col-sm-6 col-md-6 col-lg-2">
-        <img src={{persona.img}} class="rounded-circle w-25 img1" alt="..." title="...">
+        <img src="{{persona.img}}" class="rounded-circle w-25 img1" alt="..." title="...">
     </div>
     <div class="col-xs-12 col-sm-6 col-md-6 col-lg-2">
         <h4 id="Nombre">{{persona.nombre}} {{persona.apellido}}</h4>
         <p>Full Stack Developer Jr.</p>
     </div>
     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-8">
-        <span>
-        <h1 class="titulo1">Sobre mi</h1>
+        <span> 
+        <h1>Sobre mi</h1>
         <p class="parrafo">{{persona.descripcion}} </p>
         </span>
     </div>
