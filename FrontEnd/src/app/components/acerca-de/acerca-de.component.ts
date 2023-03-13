@@ -23,8 +23,7 @@ export class AcercaDeComponent implements OnInit{
     this.isLogged=false;
   }
   }
-
-  
+    
   cargarPersonas(){
     this.personaService.detail(1).subscribe(data =>
       {this.persona = data})
