@@ -3,7 +3,7 @@
         <div>
             <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
                 <div class="form-group">
-                    <label for="nombre">Titulo</label>
+                    <label for="nombre">Nombre</label>
                     <input type="text" class="form-control" id="nombre" name="nombre" [(ngModel)]="persona.nombre" required>
                 </div>
                 <div class="form-group">
@@ -11,22 +11,21 @@
                     <input type="text" class="form-control" id="apellido" name="apellido" [(ngModel)]="persona.apellido" required>
                 </div>
                 <div class="form-group">
-                    <label for="descripcion">Acerca de</label>
+                    <label for="descripcion">Descripcion </label>
                     <input type="text" class="form-control" id="descripcion" name="descripcion" [(ngModel)]="persona.descripcion" required>
                 </div>
-
                 <div class="form-group">
-
-                    
                     <label for="img">Imagen</label>
                     <input type="file" class="form-control" id="img" name="img" [(ngModel)]="persona.img" (change)="uploadImage($event)"
                     accept=".jpg, .jpeg, .png">
                 </div>
+                <div class="imagen">
+                    <img [src]="imageService.url" width="200px">
+                </div>
                 <br>
                 <button class="btn btn-primary">
-                    Modificar persona
+                    Editar Persona
                 </button>
             </form>
         </div>
     </div>
-</div>
