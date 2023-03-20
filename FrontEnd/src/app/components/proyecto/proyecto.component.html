@@ -1,22 +1,33 @@
-<h1 class="titulo1">Proyectos</h1>
 <div class="row">
-    <div >
-        <button type="button" class="btn btn-primary" routerLink="editAcercaDe/1" *ngIf="isLogged">
-            Editar Proyecto
+    <h1>Proyectos</h1>
+    <div class="col-lg-2">
+        <button type="button" class="btn btn-dark" routerLink="/nuevoProyecto" *ngIf="isLogged">
+            Nuevo Proyecto
         </button>
-    </div>    
-    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-2">
-        <h4 id="Nombre">{{proyecto.nombre}} </h4>
-        <h4>{{proyecto.link}}</h4>
     </div>
-    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-8">
-        <span> 
-        <h1>Breve resumen</h1>
-        <p class="parrafo">{{proyecto.descripcion}} </p>
-        </span>
+  
+    <div class="col lg 1"></div>
+    <div class="col-lg-11">
+        <table class="table">
+            <tbody>
+                <tr *ngFor="let Proyecto of proyecto">
+                    <td>
+                        <h2>{{Proyecto.nombre}}</h2>
+                    </td>
+                    <td>{{Proyecto.descripcion}} <img src="{{Proyecto.img}}" class="img-fluid" 
+                        id="img-proyecto"><a href="{{Proyecto.link}}" target="_blank">Ir al sitio web</a></td>
+                    <td *ngIf="isLogged">
+                        <button class="btn btn-light" routerLink="/editProyecto/{{Proyecto.id}}">
+                            <i class="bi bi-pencil-fill"></i> EDITAR</button>
+                    </td>
+                    <td *ngIf="isLogged">
+                        <button class="btn btn-danger" (click)="eliminar(Proyecto.id)">
+                            <i class="bi bi-trash-fill"></i> BORRAR</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
     </div>
-    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-2">
-        <img src="{{proyecto.img}}" class="" alt="..." title="...">
-    </div>
-
-</div>
+  
+  </div>
+  

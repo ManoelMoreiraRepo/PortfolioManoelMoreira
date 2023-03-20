@@ -6,10 +6,12 @@ import { Storage,ref, uploadBytes,list,getDownloadURL} from '@angular/fire/stora
 })
 export class ImageService {
   url: string = "";
+  urlImg: string="";
+  nombre: string="";
 
   constructor(private storage: Storage) { }
 
-  uploadImage($event:any,name: string){
+  public uploadImage($event:any,name: string){
     const file = $event.target.files[0]
     const imgRef = ref(this.storage,`imagen/` + name)
     uploadBytes(imgRef, file)
@@ -26,6 +28,10 @@ export class ImageService {
       }
     })
     .catch(error => console.log(error))
-
+  }
+  
+  clearUrl() {
+    this.url = "";
+    this.urlImg ="";
   }
 }
