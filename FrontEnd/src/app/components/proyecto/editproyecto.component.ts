@@ -10,8 +10,9 @@ import { ProyectoService } from 'src/app/service/proyecto.service';
   styleUrls: ['./editproyecto.component.css']
 })
 export class EditproyectoComponent implements OnInit{
-
+  img: string = '';
   proyecto: Proyecto =null;
+ 
 
   constructor(private activatedRouter: ActivatedRoute, 
     private proyectoService: ProyectoService, 
@@ -19,6 +20,8 @@ export class EditproyectoComponent implements OnInit{
     public imageService: ImageService) { }
 
 ngOnInit(): void {
+
+this.img=this.imageService.url;
 const id = this.activatedRouter.snapshot.params['id'];
 this.proyectoService.detail(id).subscribe(
 data => {
@@ -49,10 +52,20 @@ this.router.navigate(['']);
 );
 }
 
-uploadImage(event: any): void {
+uploadImage($event: any): void {
 const id = this.activatedRouter.snapshot.params['id'];
-const name = "proyecto_" + id;
-this.imageService.uploadImage(event, name);
+alert('esta es la id' + id)
+let name;
+
+if(id){
+   name = "Proyecto_" + id;
+}else{
+  name = "Proyecto_" + this.imageService.generateUUID();
+}
+
+ this.imageService.uploadImage($event,name)
+/*const name = "proyecto_" + id;
+this.imageService.uploadImage($event, name);*/
 }
 
 }

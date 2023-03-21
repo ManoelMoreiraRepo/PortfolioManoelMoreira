@@ -23,11 +23,11 @@ export class NewproyectoComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    this.imageService.clearUrl();
+    
   }
 
   onCreate() {
-    this.img=this.imageService.urlImg;
+   
     const proyecto = new Proyecto(
       this.nombre,
       this.descripcion,
@@ -45,14 +45,22 @@ export class NewproyectoComponent implements OnInit {
         this.router.navigate(['']);
       }      
     )
-    this.imageService.clearUrl();
+    
   }
 
   uploadImage($event:any){
+    
     const id = this.activatedRoute.snapshot.params['id'];
-    const name = "proyecto_" + id;
-    this.imageService.uploadImage($event,name)
-    alert('Esta es el la id que me llega :'+id);
+    let name;
+
+    if(id){
+       name = "Proyecto_" + id;
+    }else{
+      name = "Proyecto_" + this.imageService.generateUUID();
+    }
+    
+     this.imageService.uploadImage($event,name)
+   
 
   }
 }
