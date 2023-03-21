@@ -18,6 +18,7 @@ export class ImageService {
     .then(response => {this.getImages()}) 
     .catch(error => console.log(error))
   }
+  
   getImages(){
     const imagesRef = ref(this.storage, 'imagen')
     list(imagesRef)
@@ -29,7 +30,7 @@ export class ImageService {
     })
     .catch(error => console.log(error))
   }
-  
+
   clearUrl() {
     this.url = "";
     this.urlImg ="";

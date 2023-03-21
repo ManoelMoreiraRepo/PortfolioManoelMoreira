@@ -14,8 +14,10 @@
                     <td>
                         <h2>{{Proyecto.nombre}}</h2>
                     </td>
-                    <td>{{Proyecto.descripcion}} <img src="{{Proyecto.img}}" class="img-fluid" 
-                        id="img-proyecto"><a href="{{Proyecto.link}}" target="_blank">Ir al sitio web</a></td>
+                    <h5><td>{{Proyecto.descripcion}}</td> </h5>
+                    <br>
+                    <img src="{{Proyecto.img}}" width="600" class="img-fluid" 
+                        id="img-proyecto"><a href="{{Proyecto.link}}" target="_blank">Ir al sitio web</a>
                     <td *ngIf="isLogged">
                         <button class="btn btn-light" routerLink="/editProyecto/{{Proyecto.id}}">
                             <i class="bi bi-pencil-fill"></i> EDITAR</button>

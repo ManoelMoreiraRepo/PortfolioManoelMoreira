@@ -49,10 +49,10 @@ export class NewproyectoComponent implements OnInit {
   }
 
   uploadImage($event:any){
-    /*const id = this.activatedRoute.snapshot.params['id'];*/
-    const name = "proyecto_" + this.nombre;
+    const id = this.activatedRoute.snapshot.params['id'];
+    const name = "proyecto_" + id;
     this.imageService.uploadImage($event,name)
-    alert('Esta es el la id que me llega :'+this.nombre);
+    alert('Esta es el la id que me llega :'+id);
 
   }
 }
