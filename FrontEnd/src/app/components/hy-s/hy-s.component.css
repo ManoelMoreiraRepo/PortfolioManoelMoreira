@@ -2,6 +2,7 @@
    
     padding-left: 150px;
     padding-right: 150px;
+    display: flex;
 }
 div {
     background-color: #b8b9b9;
@@ -13,7 +14,7 @@ h1 {
 }
 
 .circulo{
-    display: flex;
+   
     flex-direction: column;
     align-items: center;
 }
