@@ -2,15 +2,16 @@
     background: #b8b9b9;
 }
 
+.row {
+    padding: 20px;
+}
+
 h1 {
     color: blue;
     padding: 20px;
 }
 
-.row {
-    background: #b8b9b9;
-}
-
 .container {
-    text-align: left;
+    padding: 5px;
+    text-align: center;
 }

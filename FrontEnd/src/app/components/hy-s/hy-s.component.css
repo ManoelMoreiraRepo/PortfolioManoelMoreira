@@ -1,10 +1,14 @@
-* {
-    background: #b8b9b9;
-}
-
-
 .row {
    
+    padding-left: 150px;
+    padding-right: 150px;
+}
+div {
+    background-color: #b8b9b9;
+}
+
+h1 {
+    color: blue;
     padding: 20px;
 }
 
@@ -13,4 +17,3 @@
     flex-direction: column;
     align-items: center;
 }
- background: #b8b9b9;
