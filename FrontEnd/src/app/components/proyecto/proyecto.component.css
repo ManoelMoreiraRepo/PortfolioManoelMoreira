@@ -1,13 +1,10 @@
-* {
-    background: #b8b9b9;
-}
-
 .row {
     padding: 20px;
+    background-color: #b8b9b9;
 }
 
 h1 {
-    color: blue;
+    color: darkblue;
     padding: 20px;
 }
 

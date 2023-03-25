@@ -1,20 +1,23 @@
-.row {
-   
-    padding-left: 150px;
-    padding-right: 150px;
-    display: flex;
-}
-div {
-    background-color: #b8b9b9;
+.cuerpo {
+  background-color: #b8b9b9;
+  padding-left: 20px;
 }
 
 h1 {
-    color: blue;
-    padding: 20px;
+  color: darkblue;
+  padding-top: 20px;
 }
 
-.circulo{
-   
-    flex-direction: column;
-    align-items: center;
+.row {
+  background-color: #b8b9b9;
+  
+}
+
+button.btn-primary {
+  margin-left: 20px;
+  
+}
+
+button.btn-danger {
+  margin-left: 5px;
 }
